@@ -21,6 +21,7 @@ public class IoTAgent {
         mLogger.info("Initializing Messenger for Iotagent-java...");
         this.messenger.init();
         mLogger.info("... Messenger was successfully initialized.");
+        mLogger.info("creating channel...");
         this.messenger.createChannel(Config.getInstance().getIotagentDefaultSubject(),"w",false);
         this.messenger.createChannel(Config.getInstance().getDeviceManagerDefaultSubject(), "rw", false);
         this.messenger.on(Config.getInstance().getDeviceManagerDefaultSubject(),"message", (ten,msg) -> { this.callback(ten,msg); return null;});
