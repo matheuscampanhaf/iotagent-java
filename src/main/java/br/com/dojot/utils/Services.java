@@ -80,7 +80,7 @@ public class Services {
             return cached;
         }
 
-        StringBuilder url = new StringBuilder(Config.getInstance().getDeviceManagerDefaultManager());
+        StringBuilder url = new StringBuilder(Config.getInstance().getDeviceManagerAddress());
         url.append("/internal/device/");
         url.append(deviceId);
         try {
