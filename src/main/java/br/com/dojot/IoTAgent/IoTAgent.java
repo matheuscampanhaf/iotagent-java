@@ -25,6 +25,7 @@ public class IoTAgent {
         this.messenger.createChannel(Config.getInstance().getIotagentDefaultSubject(),"w",false);
         this.messenger.createChannel(Config.getInstance().getDeviceManagerDefaultSubject(), "rw", false);
         this.messenger.on(Config.getInstance().getDeviceManagerDefaultSubject(),"message", (ten,msg) -> { this.callback(ten,msg); return null;});
+        this.messenger.generateDeviceCreateEventForActiveDevices();
 
     }
 

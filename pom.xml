@@ -107,9 +107,8 @@
         <dependency>
             <groupId>com.github.matheuscampanhaf</groupId>
             <artifactId>dojot-module-java</artifactId>
-            <version>implementing-lib-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
-
     </dependencies>
 
 </project>
