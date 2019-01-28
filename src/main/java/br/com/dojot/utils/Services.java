@@ -50,6 +50,7 @@ public class Services {
 
         StringBuilder url = new StringBuilder(Config.getInstance().getDeviceManagerDefaultManager());
         url.append("/device?idsOnly");
+        System.out.println("PRINTING URL: " + url);
         try {
             HttpResponse<JsonNode> request = Unirest.get(url.toString())
                     .header("authorization", "Bearer " + Auth.getInstance().getToken(tenant))
