@@ -48,9 +48,8 @@ public class Services {
     public List<String> listDevices(String tenant) {
         List<String> devices = new ArrayList<>();
 
-        StringBuilder url = new StringBuilder(Config.getInstance().getDeviceManagerDefaultManager());
+        StringBuilder url = new StringBuilder(Config.getInstance().getDeviceManagerAddress());
         url.append("/device?idsOnly");
-        System.out.println("PRINTING URL: " + url);
         try {
             HttpResponse<JsonNode> request = Unirest.get(url.toString())
                     .header("authorization", "Bearer " + Auth.getInstance().getToken(tenant))
@@ -113,5 +112,9 @@ public class Services {
         response.append(":");
         response.append(deviceId);
         return response.toString();
+    }
+
+    public static void main (String[] args){
+        Services.getInstance().listDevices("admin");
     }
 }
