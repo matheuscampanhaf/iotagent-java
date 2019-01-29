@@ -27,8 +27,8 @@ public class IoTAgent {
         this.messenger.on(Config.getInstance().getDeviceManagerDefaultSubject(),"message", (ten,msg) -> { this.callback(ten,msg); return null;});
     }
 
-    public void generateCreateDeviceEventForActiveDevices(){
-        this.messenger.generateCreateDeviceEventForActiveDevices();
+    public void generateDeviceCreateEventForActiveDevices(){
+        this.messenger.generateDeviceCreateEventForActiveDevices();
     }
 
     public void callback(String tenant, String message) {
