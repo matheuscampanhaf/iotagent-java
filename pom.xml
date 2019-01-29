@@ -107,7 +107,7 @@
         <dependency>
             <groupId>com.github.matheuscampanhaf</groupId>
             <artifactId>dojot-module-java</artifactId>
-            <version>0.0.2</version>
+            <version>0.0.3</version>
         </dependency>
     </dependencies>
 
