@@ -1,7 +1,6 @@
 package br.com.dojot.IoTAgent;
 
 import br.com.dojot.utils.Services;
-import jdk.nashorn.internal.parser.JSONParser;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.apache.log4j.Logger;
@@ -9,8 +8,8 @@ import org.apache.log4j.Logger;
 import java.time.Instant;
 import java.util.function.BiFunction;
 
-import com.mycompany.app.messenger.Messenger;
-import com.mycompany.app.config.Config;
+import com.cpqd.app.messenger.Messenger;
+import com.cpqd.app.config.Config;
 
 
 public class IoTAgent {
@@ -25,8 +24,10 @@ public class IoTAgent {
         this.messenger.createChannel(Config.getInstance().getIotagentDefaultSubject(),"w",false);
         this.messenger.createChannel(Config.getInstance().getDeviceManagerDefaultSubject(), "rw", false);
         this.messenger.on(Config.getInstance().getDeviceManagerDefaultSubject(),"message", (ten,msg) -> { this.callback(ten,msg); return null;});
-        this.messenger.generateDeviceCreateEventForActiveDevices();
+    }
 
+    public void generateDeviceCreateEventForActiveDevices(){
+        this.messenger.generateDeviceCreateEventForActiveDevices();
     }
 
     public void callback(String tenant, String message) {
