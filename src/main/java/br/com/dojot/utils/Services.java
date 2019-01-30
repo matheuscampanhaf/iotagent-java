@@ -10,8 +10,8 @@ import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.mycompany.app.config.Config;
-import com.mycompany.app.auth.Auth;
+import com.cpqd.app.config.Config;
+import com.cpqd.app.auth.Auth;
 
 import java.util.ArrayList;
 import java.util.List;
