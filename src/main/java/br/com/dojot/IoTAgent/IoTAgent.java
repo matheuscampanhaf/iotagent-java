@@ -1,7 +1,6 @@
 package br.com.dojot.IoTAgent;
 
 import br.com.dojot.utils.Services;
-import jdk.nashorn.internal.parser.JSONParser;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.apache.log4j.Logger;
