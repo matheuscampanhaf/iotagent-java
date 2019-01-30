@@ -9,8 +9,8 @@ import org.apache.log4j.Logger;
 import java.time.Instant;
 import java.util.function.BiFunction;
 
-import com.mycompany.app.messenger.Messenger;
-import com.mycompany.app.config.Config;
+import com.cpqd.app.messenger.Messenger;
+import com.cpqd.app.config.Config;
 
 
 public class IoTAgent {
